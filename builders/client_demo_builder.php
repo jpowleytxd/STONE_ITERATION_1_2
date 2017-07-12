@@ -290,6 +290,91 @@ function getStyle($brand){
                     .responsive-table{width: 100% !important; height: 100% !important;}
                     .mobile-hide{display: none !important;}
                   }
+                  @font-face {
+	font-family: "alexbrushregular";
+	src: url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=AlexBrush-Regular.eot&accountId=1222");
+	src: url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=AlexBrush-Regular.eot?#iefix&accountId=1222") format("embedded-opentype"),
+	url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=AlexBrush-Regular.woff&accountId=1222") format("woff"),
+	url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=AlexBrush-Regular.ttf&accountId=1222") format("truetype"),
+	url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=AlexBrush-Regular.svg#svgFontName&accountId=1222") format("svg");
+}
+
+.font-alexbrushregular {
+	font-family: cursive, "alexbrushregular";
+}
+
+[style*="alexbrushregular"] {
+	font-family: "alexbrushregular" !important;
+}
+
+@font-face {
+	font-family: "centurygothic";
+	src: url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=GOTHIC.TTF&accountId=1222");
+	src: url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=GOTHIC.TTF&accountId=1222") format("embedded-opentype"),
+	url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=GOTHIC.TTF&accountId=1222") format("woff"),
+	url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=GOTHIC.TTF&accountId=1222") format("truetype"),
+	url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=GOTHIC.TTF&accountId=1222") format("svg");
+}
+
+.font-centurygothic {
+	font-family: Arial, sans-serif, "centurygothic";
+}
+
+[style*="centurygothic"] {
+	font-family: "centurygothic" !important;
+}
+
+@font-face {
+	font-family: "dinregular";
+	src: url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=DINRegular.eot&accountId=1222");
+	src: url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=DINRegular.eot?#iefix&accountId=1222") format("embedded-opentype"),
+	url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=DINRegular.woff&accountId=1222") format("woff"),
+	url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=DINRegular.ttf&accountId=1222") format("truetype"),
+	url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=DINRegular.svg#svgFontName&accountId=1222") format("svg");
+}
+
+.font-dinregular {
+	font-family: Arial, sans-serif, "dinregular";
+}
+
+[style*="dinregular"] {
+	font-family: "dinregular" !important;
+}
+
+@font-face {
+	font-family: "gibsonlight";
+	src: url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=GibsonLight-Regular.eot&accountId=1222");
+	src: url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=GibsonLight-Regular.eot?#iefix&accountId=1222") format("embedded-opentype"),
+	url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=GibsonLight-Regular.woff&accountId=1222") format("woff"),
+	url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=GibsonLight-Regular.ttf&accountId=1222") format("truetype"),
+	url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=GibsonLight-Regular.svg#svgFontName&accountId=1222") format("svg");
+}
+
+.font-gibsonlight {
+	font-family: Georgia, serif, "gibsonlight";
+}
+
+[style*="gibsonlight"] {
+	font-family: "gibsonlight" !important;
+}
+
+@font-face {
+	font-family: "garamondex-blackcondensedssi";
+	src: url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=Garamond Ex BlackCondensed SSi Extra Black Condensed.eot&accountId=1222");
+	src: url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=Garamond Ex BlackCondensed SSi Extra Black Condensed.eot?#iefix&accountId=1222") format("embedded-opentype"),
+	url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=Garamond Ex BlackCondensed SSi Extra Black Condensed.woff&accountId=1222") format("woff"),
+	url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=Garamond Ex BlackCondensed SSi Extra Black Condensed.ttf&accountId=1222") format("truetype"),
+	url("https://campaigns-plus.izone-app.com/email/fonts/process/get_webfont.cfm?font=Garamond Ex BlackCondensed SSi Extra Black Condensed.svg#svgFontName&accountId=1222") format("svg");
+}
+
+.font-garamondex-blackcondensedssi {
+	font-family: Georgia, serif, "garamondex-blackcondensedssi";
+}
+
+[style*="garamondex-blackcondensedssi"] {
+	font-family: "garamondex-blackcondensedssi" !important;
+}
+
                   </style>';
 
     // if($brand === 'missoula'){

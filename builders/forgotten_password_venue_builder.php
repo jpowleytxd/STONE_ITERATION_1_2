@@ -3,6 +3,7 @@ ini_set('max_execution_time', 3000);
 include 'common.php';
 
 $saveToFile = $_POST['saveStatus'];
+// $saveToFile = true;
 $returnString = null;
 
 //Sort through venues whether they have the banner image or not
@@ -40,6 +41,10 @@ foreach(glob("../sites/*/templates/*_venue.html") as $filename){
   $color = $matches[1][0];
   $textColor = textColor($color);
 
+  // Get font
+  preg_match_all('/"paragraphFont": "(.*)"/', $template, $matches);
+  $font = $matches[1][0];
+
   //Prep Heading
   $heading = file_get_contents('../sites/' . $brand . '/bespoke_blocks/' . $brand . '_heading.html');
   $heading = str_replace('Heading goes here', $passwordRows[4], $heading);
@@ -70,9 +75,12 @@ foreach(glob("../sites/*/templates/*_venue.html") as $filename){
   //Prep Text One
   $passwordRows[5] = str_replace('"', '', $passwordRows[5]);
   $textOne = str_replace('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales vehicula tellus pellentesque malesuada. Integer malesuada magna felis, id rutrum leo volutpat eget. Morbi finibus et diam in placerat. Suspendisse magna enim, pharetra at erat vel, consequat facilisis mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla est velit, lobortis eu tincidunt sit amet, semper et lorem.', $passwordRows[5], $textOne);
-  $styleInsert = 'style="Margin-top: 15px; Margin-bottom: 15px;"';
+  $styleInsert = 'style="Margin-top: 15px; Margin-bottom: 15px; font-family: ' . $font . ';"';
   $textOne = preg_replace('/##(.+?)##/m', '<p ' . $styleInsert . '>$1</p>', $textOne);
-  $styleInsert = 'style="color: ' . $textColor . ';font-weight: bold; font-family: arial;"';
+  $styleInsert = 'style="color: ' . $textColor . ';font-weight: normal; font-family: arial;"';
+  if(strpos($brand, 'henrys') !== false){
+    $styleInsert = 'style="color: ' . $textColor . ';font-weight: normal; font-family: arial;"';
+  }
   $textOne = str_replace('<td class="text" align="left" valign="0">', '<td class="text" align="center" valign="0" ' . $styleInsert . '>', $textOne);
   $textOne = str_replace('<tr>', '<tr><td align="center" width="30"></td>', $textOne);
   $textOne = str_replace('</tr>', '<td align="center" width="30"></td></tr>', $textOne);
